@@ -3,14 +3,14 @@
   Доповніть цю функцію, використовуючи generics, щоб вона повертала правильний тип.
 */
 
-function getPromise () {
+function getPromise(): Promise<(string | number)[]> {
+  //[]отримуємо масив елементів стрінг або намбер
   return new Promise((resolve) => {
-    resolve(['Text', 50]);
+    resolve(["Text", 50]);
   });
 }
 
-getPromise()
-.then((data) => {
+getPromise().then((data) => {
   console.log(data);
 });
 
